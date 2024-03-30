@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Menu</title>
+    <link rel="stylesheet" href="css/admin.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Admin Menu</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showDashboard()">Dashboard</a></li>
+        <li><a href="#">Transaction</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+
+    <main id="dashboard" style="display: none">
+      <h2>Dashboard</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Poto</th>
+            <th>Kategori</th>
+            <th>Harga</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="poto1.jpg" alt="Product 1" /></td>
+            <td>Gacoan</td>
+            <td>$1</td>
+            <td><button>Edit</button><button>Delete</button></td>
+          </tr>
+          <tr>
+            <td><img src="poto2.jpg" alt="Product 2" /></td>
+            <td>Ayam Geprek</td>
+            <td>$3</td>
+            <td><button>Edit</button><button>Delete</button></td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Admin Panel</p>
+    </footer>
+
+    <script>
+      function showDashboard() {
+        var dashboard = document.getElementById("dashboard");
+        dashboard.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

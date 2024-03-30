@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="images-removebg-preview.png" alt="Logo" class="logo" />
+      <h3>On The Whay</h3>
+      <ul class="nav-list">
+        <li><a href="#" onclick="handleMenuClick('Home')">Home</a></li>
+        <li>
+          <a href="#" onclick="handleMenuClick('Tentang Kami')">Tentang Kami</a>
+        </li>
+        <li>
+          <a href="index.html">Menu</a>
+          <ul class="submenu">
+            <li>
+              <a href="Login.html" onclick="handleSubMenuClick('Login')"
+                >Login</a
+              >
+            </li>
+            <li>
+              <a href="register.html" onclick="handleSubMenuClick('Register')"
+                >Register</a
+              >
+            </li>
+            <li>
+              <a
+                href="transaction.html"
+                onclick="handleSubMenuClick('Halaman Admin')"
+                >Halaman Admin</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li><a href="#" onclick="handleMenuClick('Kontak')">Kontak</a></li>
+      </ul>
+      <div class="search-box">
+        <input type="text" placeholder="Cari..." />
+        <button type="submit">Cari</button>
+      </div>
+    </nav>
+    <header>
+      <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <p>Your go-to place for amazing content!</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="features">
+        <div class="feature">
+          <h2>Feature 1</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="feature">
+          <h2>Feature 2</h2>
+          <p>Proin gravida nibh vel velit auctor aliquet.</p>
+        </div>
+        <div class="feature">
+          <h2>Feature 3</h2>
+          <p>Nulla vel metus scelerisque ante sollicitudin commodo.</p>
+        </div>
+      </section>
+
+      <div class="cta">
+        <h2>Ready to Get Started?</h2>
+        <a href="#">Sign Up Now</a>
+      </div>
+    </div>
+
+    <script>
+      function handleMenuClick(menuName) {
+        alert("Clicked on " + menuName);
+      }
+
+      function handleSubMenuClick(subMenuName) {
+        alert("Clicked on submenu: " + subMenuName);
+      }
+    </script>
+  </body>
+</html>
