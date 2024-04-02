@@ -122,23 +122,50 @@ p {
 }
 
 /* Features section styles */
-.features {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.carousel-slide {
   display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
+  transition: transform 0.5s ease;
 }
 
 .feature {
-  width: 30%;
-  background-color: #fff;
-  padding: 50px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 0 0 100%;
+  padding: 0 10px;
   text-align: center;
 }
 
-.feature h2 {
-  margin-bottom: 10px;
+/* Carousel Navigation */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel-dot {
+  background-color: #ccc;
+  border: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: #555;
 }
 
 /* Call to action styles */
@@ -223,4 +250,7 @@ p {
   .cta {
     padding: 20px 0; /* Padding panggilan aksi diubah */
   }
+}
+.feature h3 {
+  color: #333;
 }
