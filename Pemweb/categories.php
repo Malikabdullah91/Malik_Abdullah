@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categories</title>
+    <link rel="stylesheet" href="css/transaction.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="navbar-logo"
+        ><img src="images-removebg-preview.png" alt="logo" width="45px"
+      /></a>
+      <h1>Terima Kasih Atas Kunjungan Anda</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.php">Dashboard</a></li>
+        <li><a href="#" onclick="showTransaction()">Transaction</a></li>
+        <li><a href="#" onclick="showDashboard()">Categories</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+
+    <main id="dashboard" style="display: none">
+      <h2>Dashboard</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Poto</th>
+            <th>Kategori</th>
+            <th>Harga</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="Untitled2.jpeg" alt="Product 1" /></td>
+            <td>Gacoan</td>
+            <td>$1</td>
+            <td><button>Edit</button><button>Delete</button></td>
+          </tr>
+          <tr>
+            <td><img src="Untitled1.jpeg" alt="Product 2" /></td>
+            <td>Ayam Geprek</td>
+            <td>$3</td>
+            <td><button>Edit</button><button>Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <main id="transaction" style="display: none">
+      <h2>Transaction</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Jenis Pesanan</th>
+            <th>Harga</th>
+            <th>Tanggal</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Malik Abdullah</td>
+            <td>Gacoan Lv.8</td>
+            <td>$2</td>
+            <td>2024-03-26</td>
+            <td><button>Edit</button><button>Delete</button></td>
+          </tr>
+          <tr>
+            <td>YAYA</td>
+            <td>Nasgor</td>
+            <td>$2</td>
+            <td>2024-03-27</td>
+            <td><button>Edit</button><button>Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+      <p>&copy;On The Way</p>
+    </footer>
+
+    <script>
+      function showDashboard() {
+        var dashboard = document.getElementById("dashboard");
+        var transaction = document.getElementById("transaction");
+        dashboard.style.display = "block";
+        transaction.style.display = "none";
+      }
+
+      function showTransaction() {
+        var dashboard = document.getElementById("dashboard");
+        var transaction = document.getElementById("transaction");
+        dashboard.style.display = "none";
+        transaction.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

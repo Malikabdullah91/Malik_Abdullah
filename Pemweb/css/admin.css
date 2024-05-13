@@ -1,132 +1,152 @@
-body {
-  font-family: Arial, sans-serif;
+/* Reset default styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
 header {
   background-color: #333;
   color: #fff;
-  padding: 1rem;
-  text-align: center;
+  padding: 10px 0;
 }
 
-nav {
-  background-color: #007bff;
-  color: #fff;
-  padding: 0.5rem;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-nav ul li {
-  margin-right: 1rem;
-}
-
-nav ul li a {
-  color: #fff;
+.navbar-logo {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  color: #333; /* Atur warna teks sesuai kebutuhan */
 }
 
-nav ul li a:hover {
-  background-color: #0056b3;
+.navbar-logo img {
+  margin-right: 5px; /* Atur jarak antara gambar dan teks */
 }
-
-main {
-  padding: 2rem;
-  text-align: center;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-}
-/* Style the table */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-/* Style table header */
-th {
-  background-color: #007bff;
-  color: #fff;
+.logo {
+  font-size: 24px;
   font-weight: bold;
-  text-align: left;
-  padding: 10px;
 }
 
-/* Style table rows */
-td {
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-
-/* Style alternating row colors */
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-/* Style table buttons */
-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
+/* Hamburger Menu styling */
+.hamburger-menu {
+  display: none; /* Sembunyikan hamburger menu di desktop */
   cursor: pointer;
-  margin-right: 5px;
 }
 
-button:hover {
-  background-color: #0056b3;
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
 }
-/* Style the table */
-table {
+
+.admin-content {
+  padding: 20px;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+.container span {
+  color: white;
+}
+.admin-content h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.admin-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #af8260;
+  transition: all 0.5s ease;
+}
+
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background: #803d3b;
+  user-select: none;
+}
+
+.sidebar ul a {
+  display: block;
+  height: 100%;
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1p solid black;
+  transition: 0.4s;
+  text-decoration: none;
 }
 
-/* Style table header */
-th {
-  background-color: #007bff;
-  color: #fff;
-  font-weight: bold;
-  text-align: left;
-  padding: 10px;
+ul li:hover a {
+  padding-left: 50px;
 }
 
-/* Style table rows */
-td {
-  border: 1px solid #ddd;
-  padding: 10px;
+.sidebar ul a i {
+  margin-right: 16px;
 }
 
-/* Style alternating row colors */
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+#check {
+  display: none;
 }
-
-/* Style table buttons */
-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
+label #btn,
+label #cancel {
+  position: absolute;
   cursor: pointer;
-  margin-right: 5px;
+  background: rgb(242, 236, 236);
+  border-radius: 3px;
+}
+label #btn {
+  left: 40px;
+  top: 20px;
+  font-size: 35px;
+  color: black;
+  padding: 6px 12px;
+  transition: all 0.5s;
 }
 
-button:hover {
-  background-color: #0056b3;
+label #cancel {
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: rgb(154, 0, 0);
+  padding: 2px 2px;
+  transition: all 0.5s ease;
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+#check:checked ~ label #cancel {
+  left: 195px;
 }
