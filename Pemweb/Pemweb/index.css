@@ -1,0 +1,256 @@
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+  border-bottom: 3px solid #007bff;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px; /* Sesuaikan ukuran logo */
+  margin-right: 10px;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+  background-color: #007bff;
+}
+
+/* Submenu styles */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.submenu li {
+  display: block;
+  margin: 0;
+}
+
+.submenu a {
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  background-color: #007bff;
+}
+
+.nav-list li:hover .submenu {
+  display: block;
+}
+h3 {
+  color: #fff;
+}
+.search-box {
+  position: relative;
+}
+
+.search-box input[type="text"] {
+  width: 150px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.search-box button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #0056b3;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Features section styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.feature {
+  flex: 0 0 100%;
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* Carousel Navigation */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel-dot {
+  background-color: #ccc;
+  border: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: #555;
+}
+
+/* Call to action styles */
+.cta {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 30px;
+}
+
+.cta h2 {
+  margin-bottom: 20px;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta a:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+/* Media Queries untuk Perangkat Mobile */
+@media only screen and (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    padding: 5px 0;
+  }
+
+  .logo {
+    width: 40px; /* Ukuran logo diubah untuk perangkat dengan lebar layar lebih kecil */
+  }
+
+  .nav-list {
+    flex-direction: column; /* Menu ditampilkan dalam satu kolom pada layar kecil */
+    align-items: flex-start;
+  }
+
+  .nav-list li {
+    margin-right: 0;
+    margin-bottom: 10px; /* Jarak antara item menu diubah */
+  }
+
+  .submenu {
+    position: static; /* Submenu ditampilkan sebagai daftar standar pada layar kecil */
+    display: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .submenu li {
+    margin-bottom: 5px;
+  }
+
+  .search-box {
+    margin-bottom: 20px; /* Jarak antara kotak pencarian dan konten diubah */
+  }
+
+  /* Container */
+  .container {
+    padding: 10px; /* Padding diubah untuk konten agar lebih compact */
+  }
+
+  /* Features section */
+  .features {
+    flex-direction: column; /* Fitur ditampilkan dalam satu kolom pada layar kecil */
+  }
+
+  .feature {
+    width: 100%; /* Lebar fitur diubah agar penuh lebar pada layar kecil */
+    margin-bottom: 20px; /* Jarak antara blok fitur diubah */
+  }
+
+  /* Call to action */
+  .cta {
+    padding: 20px 0; /* Padding panggilan aksi diubah */
+  }
+}
+.feature h3 {
+  color: #333;
+}

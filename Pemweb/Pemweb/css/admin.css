@@ -1,0 +1,152 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333; /* Atur warna teks sesuai kebutuhan */
+}
+
+.navbar-logo img {
+  margin-right: 5px; /* Atur jarak antara gambar dan teks */
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Hamburger Menu styling */
+.hamburger-menu {
+  display: none; /* Sembunyikan hamburger menu di desktop */
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+.admin-content {
+  padding: 20px;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+.container span {
+  color: white;
+}
+.admin-content h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.admin-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #af8260;
+  transition: all 0.5s ease;
+}
+
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background: #803d3b;
+  user-select: none;
+}
+
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1p solid black;
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+ul li:hover a {
+  padding-left: 50px;
+}
+
+.sidebar ul a i {
+  margin-right: 16px;
+}
+
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  background: rgb(242, 236, 236);
+  border-radius: 3px;
+}
+label #btn {
+  left: 40px;
+  top: 20px;
+  font-size: 35px;
+  color: black;
+  padding: 6px 12px;
+  transition: all 0.5s;
+}
+
+label #cancel {
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: rgb(154, 0, 0);
+  padding: 2px 2px;
+  transition: all 0.5s ease;
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+#check:checked ~ label #cancel {
+  left: 195px;
+}
