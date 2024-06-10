@@ -1,0 +1,307 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover {
+  background-color: #0056b3;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Style table header */
+th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Style table rows */
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+/* Style alternating row colors */
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style table buttons */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Style table header */
+th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Style table rows */
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+/* Style alternating row colors */
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style table buttons */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+tr th {
+  align-items: center;
+}
+/* Style untuk tombol edit dan delete */
+.action-buttons button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.action-buttons button:hover {
+  background-color: #2980b9;
+}
+
+/* Style untuk tabel transaksi */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #3498db;
+  color: #fff;
+}
+/* Style untuk container form */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style untuk judul form */
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3498db;
+}
+
+/* Style untuk label dan input */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Style untuk tombol submit */
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+/* Style untuk link "Back" */
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+/* Style untuk container form */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style untuk judul form */
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3498db;
+}
+
+/* Style untuk label dan input */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+  box-sizing: border-box;
+}
+
+/* Style untuk tombol submit */
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+/* Style untuk link "Back" */
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}

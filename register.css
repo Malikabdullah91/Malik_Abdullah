@@ -1,0 +1,126 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.menu ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu ul li {
+  margin-right: 20px;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.Register {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.Register header {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.Register form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="username"],
+input[type="password"],
+input[type="email"] {
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+input[type="username"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.btn_login {
+  background-color: #333;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn_login:hover {
+  background-color: #555;
+}
+
+.signup {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signup span {
+  color: #555;
+}
+
+.signup label {
+  color: #333;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.signup label:hover {
+  color: #555;
+}
+.signup a {
+  text-decoration: none;
+  color: #333;
+}
