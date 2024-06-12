@@ -1,65 +1,64 @@
 <?php 
 	session_start();
-	if (!isset($_SESSION['email']) || $_SESSION['email'] == null) {
-		header('Location: login.php');
-		exit();
+	if($_SESSION['username'] == null) {
+		header('location:login.php');
 	}
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Halaman Admin</title>
-    <link rel="stylesheet" href="css/admin.css" />
-    <!-- Link CSS -->
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <input type="checkbox" id="check" />
-    <label for="check">
-      <i class="bx bx-grid-alt" id="btn"></i>
-      <i class="bx bx-grid-alt" id="cancel"></i>
-    </label>
-    <div class="sidebar">
-      <header>On The Whay</header>
-      <ul>
-        <li>
-          <a href="index.php"><i class="bx bx-dashboard">Dashboard</i></a>
-        </li>
-        <li>
-          <a href="categories.php"><i class="bx bx-category">Categories</i></a>
-        </li>
-        <li>
-          <a href="transaction.php"><i class="bx bx-exchange">Transaction</i></a>
-        </li>
-        <li>
-          <a href="categories-entry.php"><i class="bx bx-entry">Categories-entry</i></a>
-        </li>
-        <li>
-          <a href="logout.php">
-	          <i class="bx bx-log-out"></i>
-	            <span class="links_name">Log out</span>
-          </a>
-        </li>
-      </ul>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="assets/icon.png" />
+  <link rel="stylesheet" href="css/admin.css" />
+  <link
+    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>On The Whay</title>
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class="bx bx-category"></i>
+      <span class="logo_name">OnTheWhay</span>
     </div>
-    <header>
-      <div class="container">
-        <a href="#" class="navbar-logo">
-          <img src="images-removebg-preview.png" alt="logo" width="39px" />
-          <span>On The Way</span>
+    <ul class="nav-links">
+      <li>
+        <a href="index.php" class="active">
+          <i class="bx bx-grid-alt"></i>
+          <span class="links_name">Dashboard</span>
         </a>
+      </li>
+      <li>
+        <a href="categories.php">
+          <i class="bx bx-box"></i>
+          <span class="links_name">Categories</span>
+        </a>
+      </li>
+      <li>
+        <a href="transaction.php">
+          <i class="bx bx-list-ul"></i>
+          <span class="links_name">Transaction</span>
+        </a>
+      </li>
+      <li class="log_out">
+        <a href="logout.php">
+          <i class="bx bx-log-out"></i>
+          <span class="links_name">Log out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class="bx bx-menu sidebarBtn"></i>
       </div>
-    </header>
+      <div class="profile-details">
+    </nav>
     <div class="home-content">
 		<center>
 			<h2>Selamat Datang</h2>
@@ -75,8 +74,22 @@
 				<h3 id="date"></h3>
 			</center>
 	</div>
-			
-<script>
+
+
+  </section>
+
+  <!-- Popup structure -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2>Confirm Navigation</h2>
+      <p>Are you sure you want to navigate to the new page?</p>
+      <button id="confirm-navigation">Yes, proceed</button>
+      <button id="cancel-navigation">Cancel</button>
+    </div>
+  </div>
+
+  <script>
 		let sidebar = document.querySelector(".sidebar");
 		let sidebarBtn = document.querySelector(".sidebarBtn");
 		sidebarBtn.onclick = function() {
@@ -129,6 +142,5 @@
 			myFunction();
 		};
 	</script>
-
-  </body>
+</body>
 </html>

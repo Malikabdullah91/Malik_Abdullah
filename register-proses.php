@@ -6,7 +6,7 @@ if(isset($_POST['register'])) {
     $email = $_POST['email'];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users VALUES(NULL, '$username','$email', '$password' )";
+    $sql = "INSERT INTO users VALUES(NULL, '$username', '$email', '$password')";
 
     if(empty($email) || empty($username) || empty($password)) {
         echo "
@@ -19,7 +19,7 @@ if(isset($_POST['register'])) {
         echo "  
             <script>
                 alert('Registrasi Berhasil Silahkan login');
-                window.location = 'Login.php';
+                window.location = 'login.php';
             </script>
         ";
     }else {

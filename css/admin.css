@@ -1,152 +1,257 @@
-/* Reset default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* admin.css */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-/* Header styling */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background: #11101d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: width 0.5s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.container {
+.sidebar.active {
+  width: 60px;
+}
+
+.sidebar .logo-details {
+  height: 80px;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  max-width: 1200px;
-  height: 50px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
-.navbar-logo {
+.sidebar .logo-details i {
+  font-size: 30px;
+  color: #fff;
+  height: 50px;
+  min-width: 60px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.sidebar .logo-details .logo_name {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.sidebar .nav-links {
+  margin-top: 10px;
+}
+
+.sidebar .nav-links li {
+  position: relative;
+  list-style: none;
+  height: 50px;
+  width: 100%;
+}
+
+.sidebar .nav-links li a {
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #333; /* Atur warna teks sesuai kebutuhan */
+  transition: all 0.4s ease;
 }
 
-.navbar-logo img {
-  margin-right: 5px; /* Atur jarak antara gambar dan teks */
-}
-.logo {
-  font-size: 24px;
-  font-weight: bold;
+.sidebar .nav-links li a:hover {
+  background: #1d1b31;
+  transform: translateZ(10px);
 }
 
-/* Hamburger Menu styling */
-.hamburger-menu {
-  display: none; /* Sembunyikan hamburger menu di desktop */
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px 0;
-}
-
-.admin-content {
-  padding: 20px;
+.sidebar .nav-links li a i {
+  min-width: 60px;
   text-align: center;
-  display: grid;
-  place-content: center;
-  height: 100vh;
+  color: #fff;
+  font-size: 24px;
+  transition: all 0.4s ease;
 }
-.container span {
-  color: white;
+
+.sidebar .nav-links li a .links_name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: all 0.4s ease;
 }
-.admin-content h1 {
-  font-size: 32px;
+
+.sidebar .nav-links .log_out {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.sidebar .nav-links .log_out a {
+  background: #1d1b31;
+}
+
+.home-section {
+  position: relative;
+  background: #f4f4f4;
+  min-height: 100vh;
+  width: calc(100% - 250px);
+  left: 250px;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .home-section {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+.home-section nav {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background: #fff;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 250px);
+  left: 250px;
+  z-index: 100;
+  padding: 0 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: width 0.5s, left 0.5s;
+}
+
+.sidebar.active ~ .home-section nav {
+  left: 60px;
+  width: calc(100% - 60px);
+}
+
+.nav-links .log_out a:hover {
+  background: #dc143c;
+  color: #fff;
+  transform: translateZ(10px);
+}
+
+.sidebar-button {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.home-content {
+  position: relative;
+  padding-top: 104px;
+  text-align: center;
+}
+
+.home-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
-.admin-content p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-.sidebar {
-  position: fixed;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background: #af8260;
-  transition: all 0.5s ease;
+.home-content h2,
+.home-content h3 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar header {
-  font-size: 22px;
+/* 3D Button Effect */
+.btn_login {
+  background-color: #4caf50;
+  border: none;
   color: white;
+  padding: 15px 32px;
   text-align: center;
-  line-height: 70px;
-  background: #803d3b;
-  user-select: none;
-}
-
-.sidebar ul a {
-  display: block;
-  height: 100%;
-  width: 100%;
-  line-height: 65px;
-  font-size: 20px;
-  color: white;
-  padding-left: 40px;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1p solid black;
-  transition: 0.4s;
   text-decoration: none;
-}
-
-ul li:hover a {
-  padding-left: 50px;
-}
-
-.sidebar ul a i {
-  margin-right: 16px;
-}
-
-#check {
-  display: none;
-}
-label #btn,
-label #cancel {
-  position: absolute;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
   cursor: pointer;
-  background: rgb(242, 236, 236);
-  border-radius: 3px;
-}
-label #btn {
-  left: 40px;
-  top: 20px;
-  font-size: 35px;
-  color: black;
-  padding: 6px 12px;
-  transition: all 0.5s;
+  transition: transform 0.3s;
 }
 
-label #cancel {
-  z-index: 1111;
-  left: -195px;
-  top: 17px;
-  font-size: 30px;
-  color: rgb(154, 0, 0);
-  padding: 2px 2px;
-  transition: all 0.5s ease;
+.btn_login:hover {
+  transform: translateZ(5px);
 }
 
-#check:checked ~ .sidebar {
+.profile-details {
+  display: flex;
+  align-items: center;
+}
+
+.profile-details .admin_name {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.profile-details i {
+  font-size: 24px;
+}
+
+/* Popup Styles */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
   left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
 }
 
-#check:checked ~ label #cancel {
-  left: 195px;
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transform: translateZ(10px);
+  transition: transform 0.3s;
+}
+
+.popup-content h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.popup-content button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.popup-content button:hover {
+  transform: translateZ(5px);
+}
+
+.popup-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
 }
